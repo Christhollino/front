@@ -1,0 +1,57 @@
+@mixin default_normalize{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+	scroll-timeline: 8s;
+	font-family: var(--DefaultFont);
+	transition: .1s ease-in-out;
+	outline: var(--primaryColor);
+};
+
+@mixin flex{
+    display: flex;
+    align-items: center;
+};
+
+@mixin flex-space-between{
+    display: flex;
+    justify-content: space-between
+};
+
+@mixin flex-space-around{
+    display: flex;
+    align-items: center;
+    justify-content: space-around
+};
+
+@mixin flex-start{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+};
+
+
+@mixin flex-space-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+};
+
+@mixin flex-align-center{
+    display: flex;
+    align-items: center;
+};
+
+@mixin flex-direction-column{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+};
+
+@mixin flex-column-between{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+};

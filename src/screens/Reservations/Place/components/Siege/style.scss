@@ -1,0 +1,52 @@
+.container-place{
+    padding: 20px 16px;
+    box-shadow: 0 12px 16px #00000017;
+    background: #fff;
+    border-radius: 5px;
+}
+.first-row {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 65px;
+    width: max-content;
+    margin-bottom: 10px;
+
+    .chauffeur {
+        grid-column: 1 / 2;
+    }
+
+    .place-container-right {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        grid-column: 2 / 3;
+    }
+}
+
+.rest-rows {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    width: max-content;
+}
+
+.place-card {
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    &.occupe {
+        background: rgb(255, 35, 35);
+    }
+    &.libre {
+        background: rgb(95, 255, 86);
+    }
+    &.attente {
+        background: rgb(255, 242, 0);
+    }
+}

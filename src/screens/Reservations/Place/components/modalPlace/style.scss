@@ -1,0 +1,48 @@
+.modal-place-container{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top : 0;
+    left : 0;
+    z-index: 12;
+    .overlay{
+        background: #00000038;
+        width: 100%;
+        height: 100%;
+    }
+    .modal-place{
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 20px 2.4%;
+        gap : 25px;
+        top : 50%;
+        left : 50%;
+        transform: translate(-50%, -50%);
+        width : 350px;
+        min-height: 250px;
+        background: #fff;
+        border-radius: 5px;
+        .message{
+            h1{
+                text-transform: lowercase;
+                line-height: 35px;
+            }
+            p{
+                margin-top: 10px;
+            }
+        }
+        .button-container{
+            button{
+                padding : 8px 24px;
+                margin-right: 10px;
+                border: none;
+                outline: none;
+                &.confirme{
+                    background: var(--primary);
+                }
+            }
+        }
+    }
+}

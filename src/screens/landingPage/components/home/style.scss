@@ -1,0 +1,47 @@
+.home-container{
+    display: flex;
+    position: relative;
+    align-items: center;
+    padding: 0 4%;
+    width: 100%;
+    height: 100vh;
+    // background: 
+    // linear-gradient(to bottom, #ffffffdf 30%, rgba(255, 255, 255, 0), #ffffff),
+    //     url("/images/route.jpg");
+    // background-position: center;
+    // background-size: cover;
+    // background-repeat: no-repeat;
+    overflow: hidden;
+    .info-container{
+        width: 50%;
+        h1{
+            font-size: 6em;
+            color : var(--text)
+        }
+        p{
+            color : var(--paragraph)
+        }
+    }
+    .image-container{
+        position: relative;
+        width: 50%;
+        height: 100%;
+        &::before{
+            content: "";
+            position: absolute;
+            right: -9%;
+            top : 0;
+            width: 70%;
+            height: 100%;
+            background: var(--primaryColor);
+            z-index: -1;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+            transform: scale(1.2);
+            object-fit: contain;
+        }
+    }
+
+}
