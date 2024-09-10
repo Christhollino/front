@@ -1,0 +1,22 @@
+.legend-container{
+    display: flex;
+    gap : 10px;
+    width: 100%;
+    height: 100%;
+    .info{
+        span{
+            display: inline-block;
+            width: 60px;
+            height: 30px;
+            &.free{
+                background: rgb(43, 255, 0);
+            }
+            &.wait{
+                background: rgb(225, 255, 0);
+            }
+            &.busy{
+                background: red;
+            }
+        }
+    }
+}

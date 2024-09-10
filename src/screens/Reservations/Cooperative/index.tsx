@@ -27,9 +27,16 @@ export function Cooperative() {
   const [depart, setDepart] = React.useState('');
   const [arrive, setArrive] = React.useState('');
 
+  const fetchVoyages = () => {
+    // Appeler l'API avec la date de départ sélectionnée
+    const dateStr = startDate.format('YYYY-MM-DD');
+    getData(`http://127.0.0.1:3000/voyage?dateDepart=${dateStr}`);
+  };
+
   useEffect(() => {
-    getData("http://127.0.0.1:3000/voyage/");
-  }, []);
+    // Appeler l'API avec la date d'aujourd'hui par défaut
+    fetchVoyages();
+  }, [startDate]);
 
   return (
     <div className="all-cooperative-result">
@@ -78,13 +85,14 @@ export function Cooperative() {
               onChange={(newValue) => {
                 if (newValue) {
                   setStartDate(newValue);
+                  fetchVoyages(); // Appeler l'API lorsque la date change
                 }
               }}
               minDate={today}
               sx={{ height: '40px' }}
             />
             <IconButton
-              onClick={() => {}}
+              onClick={fetchVoyages}
               sx={{ height: '40px', marginTop: '8px', background: "blue", color: "#ffffff" }}
             >
               <SearchIcon />

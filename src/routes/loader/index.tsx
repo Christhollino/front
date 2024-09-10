@@ -1,13 +1,19 @@
-// import React from "react"
+import { Player, Controls } from '@lottiefiles/react-lottie-player';
+// import "./style.scss"
 
 const Loader = () => {
     return (
-        <div className='footer-container'>
-			<div className="box">
+			<div className="loader-container">
                 <div className="loader8"></div>
-                <p>loader ......6</p>
+                <Player
+                    autoplay
+                    loop
+                    src="/loaders/animation.json"
+                    style={{ height: '300px', width: '300px' }}
+                    >
+                    {/* <Controls visible={true} buttons={['play', 'repeat', 'frame', 'debug']} /> */}
+                </Player>
             </div>
-		</div>
     )
 }
 

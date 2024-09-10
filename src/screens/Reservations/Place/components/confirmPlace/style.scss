@@ -1,0 +1,37 @@
+.confirm-place{
+    width: 100%;
+    height: 100%;
+
+    
+    .modal-place{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 20px 2.4%;
+        gap : 25px;
+        width : 100%;
+        height: 100%;
+        background: #fff;
+        border-radius: 5px;
+        .message{
+            h1{
+                text-transform: lowercase;
+                line-height: 35px;
+            }
+            p{
+                margin-top: 10px;
+            }
+        }
+        .button-container{
+            button{
+                padding : 8px 24px;
+                margin-right: 10px;
+                border: none;
+                outline: none;
+                &.confirme{
+                    background: var(--primary);
+                }
+            }
+        }
+    }
+}

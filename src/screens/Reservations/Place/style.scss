@@ -1,36 +1,86 @@
 .voyageur-container{
-    h1{
-        text-align: center;
-        text-transform: uppercase;
-        padding-top: 2%;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    .nav-bar{
+        position: relative;
+        width: 100%;
+        height: 25vh;
+        background: #fff;
+        .go-back{
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 50%;
+            left : 2%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #ffffff;
+            box-shadow: 0 10px 15px #00000009;
+            cursor: pointer;
+        }
+        h1{
+            text-align: center;
+            text-transform: uppercase;
+            padding-top: 2%;
+        }
     }
+    
     .all-place-container{
         display: flex;
         align-items: center;
+        justify-content: space-around;
+        padding: 0 0 0 6%;
         gap : 50px;
         width: 100%;
-        height: 100vh;
+        height: 100%;
         // background: red;
         .informations-voyage{
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            width: 100%;
-            height: 30%;
-            // background: #fff;
-            img{
-                width : 100%;
-                height: 100%;
-                object-fit: contain;
+            gap : 20px;
+            width: 40%;
+            height: 100%;
+            background: #fff;
+            .legend-container{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 15%;
             }
+            .little-info{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 50%;
+                img{
+                    width : 50%;
+                    height: 50%;
+                    object-fit: contain;
+                }
+            }
+            .modal-place{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 30%;
+            }
+            
         }
         .informations-place{
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 100%;
-            height: 70%;
+            width: 40%;
+            height: 100%;
             gap : 20px;
             // background-color: red;
             .siege-container{
@@ -48,46 +98,46 @@
         }
     }
 }
-.all-place-container{
-    display: flex;
-    align-items: center;
-    gap : 50px;
-    width: 100%;
-    height: 100vh;
-    // background: red;
-    .informations-voyage{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 30%;
-        // background: #fff;
-        img{
-            width : 100%;
-            height: 100%;
-            object-fit: contain;
-        }
-    }
-    .informations-place{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 70%;
-        gap : 20px;
-        // background-color: red;
-        .siege-container{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            // width: 50%;
-        }
-        .passager-container{
-            width: 40%;
-            height: 100%;
-            // background: blue;
-        }
-    }
-}
+// .all-place-container{
+//     display: flex;
+//     align-items: center;
+//     gap : 50px;
+//     width: 100%;
+//     height: 100vh;
+//     // background: red;
+//     .informations-voyage{
+//         display: flex;
+//         flex-direction: column;
+//         justify-content: center;
+//         align-items: center;
+//         width: 20%;
+//         height: 100%;
+//         background: #fff;
+//         img{
+//             width : 100%;
+//             height: 100%;
+//             object-fit: contain;
+//         }
+//     }
+//     .informations-place{
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//         width: 100%;
+//         height: 70%;
+//         gap : 20px;
+//         // background-color: red;
+//         .siege-container{
+//             display: flex;
+//             flex-direction: column;
+//             justify-content: center;
+//             align-items: center;
+//             // width: 50%;
+//         }
+//         .passager-container{
+//             width: 40%;
+//             height: 100%;
+//             // background: blue;
+//         }
+//     }
+// }
