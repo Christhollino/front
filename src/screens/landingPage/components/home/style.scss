@@ -1,4 +1,5 @@
 .home-container{
+    justify-content: space-between;
     display: flex;
     position: relative;
     align-items: center;
@@ -14,14 +15,41 @@
     overflow: hidden;
     .info-container{
         width: 50%;
+        animation: fadeIn 1.5s ease-in-out;
+        animation: slideIn 1.5s ease-out;
         h1{
             font-size: 6em;
-            color : var(--text)
+            color : #333;                       //var(--text)
+            animation: slideIn 2.1s ease-out;
         }
         p{
-            color : var(--paragraph)
+            font-size: 1.2rem;
+            color : #333;                       //var(--paragraph)
+            margin-bottom: 10px;
+            animation: fadeIn 2s ease-in;
         }
     }
+
+    @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      
+      @keyframes slideIn {
+        from {
+          transform: translateX(-100%);
+          opacity: 0;
+        }
+        to {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+
     .image-container{
         position: relative;
         width: 50%;
@@ -33,7 +61,7 @@
             top : 0;
             width: 70%;
             height: 100%;
-            background: var(--primaryColor);
+            background: #069e01;                              //var(--primaryColor);
             z-index: -1;
         }
         img{
@@ -43,5 +71,10 @@
             object-fit: contain;
         }
     }
+
+    .Fy{
+        color: #069e01;
+    }
+
 
 }

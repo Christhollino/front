@@ -1,4 +1,4 @@
-import { Player, Controls } from '@lottiefiles/react-lottie-player';
+import { Player } from '@lottiefiles/react-lottie-player';
 // import "./style.scss"
 
 const Loader = () => {
@@ -8,7 +8,7 @@ const Loader = () => {
                 <Player
                     autoplay
                     loop
-                    src="/loaders/animation.json"
+                    src="/loaders/animation1.json"
                     style={{ height: '300px', width: '300px' }}
                     >
                     {/* <Controls visible={true} buttons={['play', 'repeat', 'frame', 'debug']} /> */}

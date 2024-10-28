@@ -1,6 +1,7 @@
 import { NavBars } from "./components/navBars"
 import { Home } from "./components/home"
 import { Service } from "./components/services"
+import { Footer } from "./components/footer"
 import AuthUser from "../auhtentifications"
 
 import "./style.scss"
@@ -18,13 +19,13 @@ export function LandingPage(){
     }
 
     const homeData = {
-        title : "Itatitra",
+        //title : "Itatitra",
         description : `
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-            Dolorem explicabo nesciunt velit harum voluptatum praesentium, 
-            tenetur totam natus inventore distinctio iste voluptatem? At id facilis 
-            temporibus quas magnam. Minima soluta deleniti repellendus vero eos. 
-            Aut incidunt consectetur ullam veniam ducimus officiis obcaecati cupiditate 
+            Nous avons créé cette plateforme pour vous, 
+            afin de vous offrir une gestion simplifiée et 
+            rapide de votre coopérative, avec des services 
+            garantis fiables, vous assurant ainsi une expérience 
+            client optimale et un gain de temps précieux. 
         `,
         image : "/images/car.png"
     }
@@ -43,6 +44,10 @@ export function LandingPage(){
         },
     ];
 
+    // const footerData = {
+    //     text : 
+    // }
+
 
     return(
         <div className="landing-page-container">
@@ -55,7 +60,7 @@ export function LandingPage(){
                 onSignin={()=>setSign(true)}
             />
             <Home 
-                title={homeData.title}
+                //title={homeData.title}
                 description={homeData.description}
                 image={homeData.image}
             />

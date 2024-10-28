@@ -8,6 +8,9 @@ const Loader = lazy(() => import('./loader'));
 // Principal route importation
 const Main = lazy(() => import('./main'));
 const Dashboard = lazy(() => import('./dashboard'));
+const Chauffeur = lazy(() => import('./chauffeur'));
+const Voiture = lazy(() => import('./voiture'));
+const Voyage = lazy(() => import('./voyage'));
 // const Auth = lazy(() => import('./auth'));
 // const Redirect = lazy(() => import('./redirect'));
 
@@ -24,6 +27,9 @@ const RoutesConfig: React.FC = () => {
                 {/* <Auth /> */}
                 {/* <Redirect /> */}
                 <Dashboard />
+                <Chauffeur />
+                <Voiture />
+                <Voyage />
             </Suspense>
         </BrowserRouter>
     );

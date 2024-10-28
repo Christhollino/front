@@ -55,6 +55,8 @@ function AuthUser({ onExit } : propsType) {
         const formData = new FormData(event.currentTarget as HTMLFormElement);
         const data: any = Object.fromEntries(formData.entries());
         data.role = isClient ? "CLIENT" : "COOPERATIVE";
+
+        //console.log("Données envoyées au serveur:", data);
     
         try {
             await postRequest('http://127.0.0.1:3000/auth/signup', data);
@@ -73,9 +75,6 @@ function AuthUser({ onExit } : propsType) {
         }
     };
     
-    
-    
-
     return (
         <div className="login-container">
             <div className="auth-contain">

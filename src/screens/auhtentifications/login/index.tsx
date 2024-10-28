@@ -13,7 +13,7 @@ export function LoginUser({ onExit }: PropsType) {
     const password = useRef<HTMLInputElement | null>(null);
 
     const [isLoading, setIsLoading] = useState(false);
-    const { postRequest, loading, error, response } = usePostRequest<{ token: string }>();
+    const { postRequest, loading, error, response } = usePostRequest<{ token: string , role: string }>();
 
     const navigate = useNavigate();
 
@@ -27,10 +27,19 @@ export function LoginUser({ onExit }: PropsType) {
 
         try {
             await postRequest("http://127.0.0.1:3000/auth/login", data);
-            console.log(response)
-            if (response?.data?.token) {
+            console.log(response);
+            if (response?.data?.token && response?.data?.role) {
                 localStorage.setItem("itatitraToken", response.data.token);
-                navigate("/reservation");
+                 //navigate("/reservation");
+
+                if (response.data.role === "CLIENT") {
+                    navigate("/reservation");
+                } else if (response.data.role === "COOPERATIVE") {
+                    navigate("/dashboard");
+                } else {
+                    console.log("Rôle non reconnu");
+                }
+
             } else {
                 console.log("Token not found in response");
             }

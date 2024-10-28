@@ -28,7 +28,6 @@ export function Cooperative() {
   const [arrive, setArrive] = React.useState('');
 
   const fetchVoyages = () => {
-    // Appeler l'API avec la date de départ sélectionnée
     const dateStr = startDate.format('YYYY-MM-DD');
     getData(`http://127.0.0.1:3000/voyage?dateDepart=${dateStr}`);
   };

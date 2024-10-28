@@ -1,0 +1,300 @@
+.voiture-main{
+    height: 100vh;
+    background-image: url('../../../presentation/assets/image/branding/background/Background_glass3.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.voiture-container{
+    background-color: var(--backgroundColor);
+    height: 100vh;
+    display: flex;
+    background-image: url('../../../presentation/assets/image/branding/background/BackgroundCard_white.png');
+}
+
+.dash-sidebar-container{
+    height: 100%;
+    width: 320px;
+}
+
+.voiture-content{
+    height: 100%;
+    width: 100%;
+    padding-top: 20px;
+    padding-right: 15px;
+}
+
+.voiture-outlet{
+    // background-color: red;
+    animation: swipeFadeUp 1s ease;
+    height: 88vh;
+    overflow-y: auto;
+    margin: 0px 20px;
+    padding: 30px;
+}
+
+.diana-modal {
+    position: fixed;
+    top: 0;
+    backdrop-filter: blur(5px);
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: var(--darkFontColor);
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Ensure modal is on top of other content */
+}
+
+.content-ct{
+    display: flex;
+}
+
+.swipe{
+  animation: swipeFadeUp 1s ease;
+}
+
+
+.left-content {
+    flex: 1;
+    height: 300px;
+    padding-right: 20px;
+    width: 50%;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+}
+
+.right-content {
+    flex: 1;
+    padding: 20px;
+    width: 50%;
+    color: var(--darkFontColor);
+
+    h1{
+        margin-bottom: 10px;
+    }
+
+    p{
+        font-size: 13px;
+    }
+
+}
+
+.demo {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+    width: 100%;
+    margin: 0 10px 20px;
+  }
+
+  .aiNavigation_input{
+    color: var(--darkFontColor)
+  }
+
+  
+  @-webkit-keyframes redPath {
+    50% {
+      top: 20px;
+    }
+  }
+  
+  @keyframes redPath {
+    50% {
+      top: 20px;
+    }
+  }
+  @-webkit-keyframes bluePath {
+    50% {
+      bottom: 20px;
+      left: 20px;
+    }
+  }
+  @keyframes bluePath {
+    50% {
+      bottom: 20px;
+      left: 20px;
+    }
+  }
+  @-webkit-keyframes greenPath {
+    50% {
+      bottom: 20px;
+      right: 20px;
+    }
+  }
+  @keyframes greenPath {
+    50% {
+      bottom: 20px;
+      right: 20px;
+    }
+  }
+  @-webkit-keyframes rotateAll {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes rotateAll {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  .blur-loader {
+    -webkit-animation: rotateAll 2000ms linear infinite;
+            animation: rotateAll 2000ms linear infinite;
+    width: 150px;
+    height: 150px;
+    position: relative;
+  }
+
+  .errorPage{
+    font-size: 5px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    border-radius: 50px;
+    color: #fff;
+    margin-left: 10px;
+    background-color: var(--dangerColor);
+  }
+
+  .blur-loader__dot {
+    transform: rotate(0);
+    transform-origin: top center;
+    mix-blend-mode: screen;
+    border-radius: 50%;
+    opacity: 0.8;
+    display: block;
+    width: 100px;
+    height: 100px;
+    filter: blur(10px);
+    position: absolute;
+  }
+  .blur-loader__dot:nth-child(1) {
+    -webkit-animation: redPath 3000ms linear infinite;
+            animation: redPath 3000ms linear infinite;
+    background: #d85dc1;
+    margin-left: -15px;
+    top: 0;
+    left: 50%;
+    margin-left: -20px;
+  }
+  .blur-loader__dot:nth-child(2) {
+    -webkit-animation: bluePath 3000ms linear infinite;
+            animation: bluePath 3000ms linear infinite;
+    background: rgb(79, 110, 234);
+    bottom: 0;
+    left: 0;
+  }
+  .blur-loader__dot:nth-child(3) {
+    -webkit-animation: greenPath 3000ms linear infinite;
+            animation: greenPath 3000ms linear infinite;
+    background: rgb(57, 149, 7);
+    bottom: 0;
+    right: 0;
+  }
+
+
+/* Style pour l'effet typewriter */
+.typewriter {
+    overflow: hidden; /* Garde le texte caché */
+    border-right: .15em solid orange; /* Effet cursor */
+    white-space: wrap; /* Empêche le texte d'aller à la ligne */
+    margin: 0; /* Réinitialise les marges */
+    animation: 
+        typing 3.5s steps(40, end),
+        blink-caret .75s step-end infinite; /* Animation du typewriter */
+}
+
+/* Animation pour le typewriter */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+}
+
+.diana-modal-content {
+    background-color: var(--fillInput);
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    width: 80%;
+    max-width: 600px;
+
+    .destruction{
+      padding: 20px;
+    }
+}
+
+.content-ct{
+    display: flex;
+    align-items: center;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    color: #666;
+}
+
+.close:hover {
+    color: #333;
+}
+
+.modal h2 {
+    margin-bottom: 10px;
+}
+
+.modal p {
+    margin-bottom: 20px;
+}
+
+
+// .voiture-content{
+//     height: 88%;
+//     margin-top: 10px;
+//     overflow-y: auto;
+// }
+
+@media screen and (max-width: 770px){
+    .voiture-container{
+        flex-direction: column-reverse;
+    }
+
+    .diana-modal-content{
+        width: 90%;
+    }
+
+    .dash-sidebar-container{
+        width: 100%;
+        height: 80px;
+    }
+
+    .voiture-content{
+        padding-right: 0px;
+    }
+
+    .voiture-outlet{
+        height: 75vh;
+        margin: 0px 20px;
+        padding: 30px;
+    }
+}
+
+@media screen and (max-width: 370px){
+    .voiture-outlet{
+        height: 70vh;
+        margin: 0px 20px;
+        padding: 30px;
+    }
+}

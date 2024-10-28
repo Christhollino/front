@@ -29,12 +29,12 @@ const Sidebar: React.FC = () => {
                     <p>FyTatitra</p>
                 </div>
                 <div className="menu">
-                    <Link to="/dashboard" className="active"><i className="fa-solid fa-chart-simple"></i> Tableau de bord</Link>
+                    <Link to="/dashboard"><i className="fa-solid fa-chart-simple"></i> Tableau de bord</Link>
                     <Link to="/chauffeur"><i className="fa-solid fa-briefcase payment"></i> Chauffeur</Link>
                     <Link to="/voiture"><i className="fa-solid fa-user personnel"></i> Voiture</Link>
-                    <Link to="/voyage"><i className="fa-solid fa-money-check payment"></i> Voyage</Link>
+                    <Link to="/voyage" className="active"><i className="fa-solid fa-money-check payment"></i> Voyage</Link>
                     <hr />
-    
+                    
                 </div>
                 
                 <div className="logout-btn">
